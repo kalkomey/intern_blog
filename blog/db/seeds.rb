@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-authors = 10.times.map do
+authors = Array.new(10) do
   Author.create(
     full_name: Faker::Name.name,
     dob: Faker::Date.birthday(18, 65),

@@ -17,6 +17,6 @@ class Author < ApplicationRecord
   end
 
   def born_in_the_past
-    errors.add(:dob, 'Must be in the past') unless dob < Date.current
+    errors.add(:dob, 'Must be in the past') unless dob && dob < Date.current
   end
 end

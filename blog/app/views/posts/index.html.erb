@@ -1,6 +1,6 @@
 
 <p>
-  <%= link_to 'Create new Post', new_post_path, class: 'btn btn-primary' %>
+  <%= link_to 'Create new Post', new_post_path, class: "btn btn-primary #{!Author.exists? && 'disabled'}" %>
   <%= link_to 'Create new Author', new_author_path, class: 'btn btn-success' %>
 </p>
 

@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:success] = 'Post created'
-      redirect_to post_path(@post)
+      redirect_to @post
     else
       flash[:error] = 'Failed to create post'
       render :new
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   def update
     if @post.update(post_params)
       flash[:success] = 'Post updated'
-      redirect_to post_path(@post)
+      redirect_to @post
     else
       flash[:error] = 'Could not update post'
       render :edit
