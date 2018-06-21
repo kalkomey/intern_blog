@@ -1,0 +1,23 @@
+
+<p>
+  <%= link_to 'Create new Post', new_post_path, class: 'btn btn-primary' %>
+  <%= link_to 'Create new Author', new_author_path, class: 'btn btn-success' %>
+</p>
+
+<% if @posts.blank? %>
+  <p>
+    There don't seem to be any posts here.
+  </p>
+<% else %>
+  <ul class="list-group">
+    <% @posts.each do |post| %>
+      <li class="list-group-item">
+        <h3><%= link_to post.title, post %></h3>
+        <p>
+          <%= post.body.truncate(100) %>
+        </p>
+        <%= render 'post_notes', post: post %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

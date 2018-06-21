@@ -1,0 +1,25 @@
+
+<% if post.errors.any? %>
+  <ul>
+    <% post.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for post do |f| %>
+  <div class="form-group">
+    <%= f.label 'Title' %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Post Body' %>
+    <%= f.text_area :body, class: "form-control", placeholder: "Post body" %>
+  </div>
+  <div class="form-group">
+    <%= f.label 'Author' %>
+    <%= f.collection_select :author_id, Author.all, :id, :full_name, {}, { class: "custom-select" } %>
+  </div>
+  <%= f.submit f.object.persisted? ? 'Save' : 'Create', class: "btn btn-primary" %>
+  <%= link_to 'Back', :back, class: "btn btn-light" %>
+<% end %>

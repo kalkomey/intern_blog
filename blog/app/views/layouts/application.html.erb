@@ -10,6 +10,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-light bg-light">
+      <%= link_to 'Home', root_path, class: "navbar-brand" %>
+    </nav>
+
+    <div class="container home">
+
+      <% flash.each do |type, message| %>
+        <div class="alert <%= bootstrap_class_for(type) %>">
+          <%= message %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+    </div>
   </body>
 </html>
