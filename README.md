@@ -5,7 +5,7 @@ To set up:
 
 ```
 git clone -b mattboldt_blog https://github.com/kalkomey/intern_blog.git
-cd blog
+cd intern_blog/blog
 bundle install
 rake db:migrate
 rake db:seed
