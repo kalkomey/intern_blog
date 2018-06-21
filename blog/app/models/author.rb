@@ -7,8 +7,8 @@ class Author < ApplicationRecord
 
   def full_name=(name)
     names = name.split(' ')
-    self.first_name = names.first
-    self.last_name = names.last unless names.length == 1
+    self.first_name = names.shift
+    self.last_name = names.join(' ') unless names.blank?
     full_name
   end
 
