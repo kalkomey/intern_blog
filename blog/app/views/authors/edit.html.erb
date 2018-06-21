@@ -1,0 +1,23 @@
+<%= form_with model: @author, local:true do |form| %>
+    <h1>Editing <%=@author.firstname%> <%=@author.lastname%>:</h1>
+    <p>Firstname:
+        <%= form.label :firstname%>
+            <br>
+            <%= form.text_field :firstname %>
+    </p>
+    <p>Lastname:
+        <%= form.label :lastname%>
+            <br>
+            <%= form.text_field :lastname%>
+    </p>
+
+    <p>DOB
+    	<%= form.label :dob %>
+    		<br>
+    		<%= form.date_field :dob, as: :date, value: form.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
+    	</p>
+
+    <p>
+        <%= form.submit %>
+    </p>
+    <% end %>

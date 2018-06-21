@@ -1,0 +1,27 @@
+<body class='w3-theme-14'>
+
+<h1>Posts</h1>
+<p>Hot dog hot dog hot diggity dog </p>
+
+<p><%= link_to 'New Post', new_post_path %> </p>
+<p><%= link_to 'New Author', new_author_path %></p>
+<table>
+    <tr>
+        <th>Titles</th>
+        <th>Preview</th>
+        <th>Author</th>
+    </tr>
+    <% @posts.limit(5).each do |po| %>
+        <tr>
+            <td>
+                <%= link_to po.title, post_path(po)%>
+            </td>
+            <td>
+                <%= truncate(po.body, :length =>100) %>
+            </td>
+            <td><%= link_to po.author.try(:name), author_path(po.author_id) %></td>
+            <td><%= po.created_at %></td>
+        </tr>
+        <% end %>
+</table>
+</body>

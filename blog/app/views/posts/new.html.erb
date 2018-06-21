@@ -1,0 +1,22 @@
+<h1>Want to write a post?</h1>
+<p>Just fill out this form</p>
+<%= form_with scope: :post, url: posts_path, local: true do |form| %>
+    <p>Post Title:
+        <%= form.label :title %>
+            <br>
+            <%= form.text_field :title %>
+    </p>
+    <p> Body:
+        <%= form.label :body %>
+            <br>
+            <%= form.text_field :body %>
+    </p>
+    <p>Select an Author:
+        <%= form.collection_select(:author_id, Author.all, :id, :firstname, prompt: true) %>
+       
+    </p>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+    <% end %>

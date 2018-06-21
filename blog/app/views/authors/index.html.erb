@@ -1,0 +1,32 @@
+<h1>Welcome to the Author's Page</h1>
+<p>Here is the list of Authors</p>
+<p><%= link_to 'New', new_author_path %> </p>
+<table>
+    <tr>
+        <th>Name</th>
+        <th></th>
+        <th>DOB</th>
+    </tr>
+    <% @authors.each do |a| %>
+        <tr>
+            <td>
+                <%= a.firstname %>
+            </td>
+            <td>
+                <%= a.lastname %>
+            </td>
+            <td>
+            	<%= a.dob %>
+            </td>
+            <td>
+                <%= link_to 'Show', author_path(a) %>
+            </td>
+            <td>
+                <%= link_to 'Delete', author_path(a), method: :delete, data: {confirm: 'Delete Author and his posts? '} %>
+            </td>
+            <td>
+                <%= link_to 'Edit', edit_author_path(a) %>
+            </td>
+        </tr>
+        <% end %>
+</table>
