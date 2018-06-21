@@ -1,3 +1,23 @@
+
+# mattboldt_blog branch
+
+To set up:
+
+```
+git clone -b mattboldt_blog https://github.com/kalkomey/intern_blog.git
+cd blog
+bundle install
+rake db:migrate
+rake db:seed
+rails server
+# Visit http://localhost:3000/
+```
+
+In another terminal tab, run the tests:
+```
+rspec
+```
+
 # Intern Blog Project
 Create a Rails application to allow multiple authors to create blog posts on a single website.  The following pages should be present on the website.
 
