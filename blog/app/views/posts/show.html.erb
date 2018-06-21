@@ -1,0 +1,11 @@
+<h2> Post <%= @post.title %> </h2>
+
+<p><%= link_to @post.author_id, author_path(@post.author_id) %></p>
+<p><%= @post.created_at %></p>
+
+
+<p><%= @post.body %></p>
+
+<p><%= link_to 'Edit', edit_post_path %></p>
+
+<p><%= link_to 'List', posts_path %> </p>

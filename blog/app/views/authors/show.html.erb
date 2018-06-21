@@ -1,0 +1,14 @@
+<h2> Author <%= @author.firstname %> <%= @author.lastname %></h2>
+
+<h3>Born on <%= @author.dob %></h3>
+
+
+
+  <p><% @author.posts.each do |f| %>
+  		<%= link_to f.title, post_path(f) %>
+
+
+</p>
+  	<% end %>
+
+<p><%= link_to 'List', authors_path %> </p>

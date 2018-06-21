@@ -1,0 +1,20 @@
+<h1>Want to be an Author?</h1>
+<p>Just fill out this form</p>
+<%= form_with scope: :author, url: authors_path, local: true do |form| %>
+    <p>First name:
+        <%= form.label :firstname %>
+            <br>
+            <%= form.text_field :firstname %>
+    </p>
+    <p> Last name:
+        <%= form.label :lastname %>
+            <br>
+            <%= form.text_field :lastname %>
+    </p>
+    <p>DOB:
+        <%= form.label :dob%>
+            <%= form.date_field :dob, as: :date, value: form.object.try(:strftime,"%m/%d/%Y"), class: 'form-control' %>
+    </p>
+
+    <p><%= form.submit %></p>
+    <% end %>
