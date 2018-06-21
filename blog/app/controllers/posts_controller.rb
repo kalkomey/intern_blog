@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.limit(5)
+    @post_count = Post.count
   end
 
   def new

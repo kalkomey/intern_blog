@@ -22,6 +22,6 @@
   </ul>
   <hr>
   <p>
-    Displaying <%= @posts.size %> out of <%= Post.count %> blog posts.
+    Displaying <%= @posts.size %> out of blog <%= pluralize(@post_count, 'post') %>
   </p>
 <% end %>
