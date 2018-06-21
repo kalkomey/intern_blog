@@ -20,25 +20,25 @@ rspec
 
 ### Some interesting links in the project:
 
-- [author.rb model](../blob/mattboldt_blog/blog/app/models/author.rb)
+- [author.rb model](../mattboldt_blog/blog/app/models/author.rb)
   - Includes validations for author details
   - the `full_name` for combining first and last name programmatically
-- [posr.rb model](../blob/mattboldt_blog/blog/app/models/post.rb)
+- [posr.rb model](../mattboldt_blog/blog/app/models/post.rb)
   - `to_param` method for generating url slugs
-- [authors controller](../blob/mattboldt_blog/blog/app/controllers/authors_controller.rb)
-- [posts controller](../blob/mattboldt_blog/blog/app/controllers/posts_controller.rb)
-- [application helper](../blob/mattboldt_blog/blog/app/helpers/application_helper.rb)
+- [authors controller](../mattboldt_blog/blog/app/controllers/authors_controller.rb)
+- [posts controller](../mattboldt_blog/blog/app/controllers/posts_controller.rb)
+- [application helper](../mattboldt_blog/blog/app/helpers/application_helper.rb)
   - Application-wide reusable helpers for our views
-- [routes](../blob/mattboldt_blog/blog/config/routes.rb)
+- [routes](../mattboldt_blog/blog/config/routes.rb)
   - How we tell what urls go where
-- [database migrations](../tree/mattboldt_blog/blog/db/migrate)
+- [database migrations](../mattboldt_blog/blog/db/migrate)
   - How our database is built
-- [seeds](../blob/mattboldt_blog/blog/db/seeds.rb)
+- [seeds](../mattboldt_blog/blog/db/seeds.rb)
   - Fake data loaded into the project for development purposes
-- [authors controller tests](../blob/mattboldt_blog/blog/spec/controllers/authors_controller_spec.rb)
+- [authors controller tests](../mattboldt_blog/blog/spec/controllers/authors_controller_spec.rb)
   - Testing that our controllers work as expected
-- [author model unit tests](../blob/mattboldt_blog/blog/spec/models/author_spec.rb)
-  - Testing that our model data is created properly 
+- [author model unit tests](../mattboldt_blog/blog/spec/models/author_spec.rb)
+  - Testing that our model data is created properly
 
 # Intern Blog Project
 Create a Rails application to allow multiple authors to create blog posts on a single website.  The following pages should be present on the website.
